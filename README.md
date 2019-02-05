@@ -33,7 +33,7 @@ The solutions that exist today are SmartWatch based, which provide monitoring of
 
 ## Materials:
 
-Si quieres recrear el sistema 
+Si quieres recrear el sistema  
 
 Optional to make the PCB:
 
