@@ -4,6 +4,8 @@ Weather monitoring system and emergency notifications based on Rapid IoT Prototy
 
 <img src="https://i.imgur.com/ku97zfn.gif" width="1000">
 
+![](https://i.imgur.com/ku97zfn.gif)
+
 Always use technology to improve the world, if you are a black hat or gray hat hacker please abstain at this point ......... or at least leave your star to make me feel less guilty XP.
 
 # Table of contents
