@@ -2,7 +2,7 @@
 
 Weather monitoring system and emergency notifications based on Rapid IoT Prototyping Kit.
 
-<img src="https://media.giphy.com/media/3MiPVOYUmgXakluoyq/giphy.gif" width="1000">
+<img src="https://gph.is/2St57fB" width="1000">
 
 Always use technology to improve the world, if you are a black hat or gray hat hacker please abstain at this point ......... or at least leave your star to make me feel less guilty XP.
 
