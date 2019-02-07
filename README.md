@@ -1,6 +1,6 @@
 # SmartBike-NXP
 
-Weather monitoring system and emergency notifications based on Rapid IoT Prototyping Kit
+Weather monitoring system and emergency notifications based on Rapid IoT Prototyping Kit.
 
 <img src="https://media.giphy.com/media/OSf8zHBGSAdMnRNPRK/giphy.gif" width="1000">
 
