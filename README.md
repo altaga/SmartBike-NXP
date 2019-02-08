@@ -50,30 +50,30 @@ Hardware:
  
 ## NXP Software:
 
-Para el desarollo del software se utilizo Rapid IoT Studio tomando como template el ejemplo "Rapid IoT Weather Station", a este proyecto se le hiceron varios cambios importantes.
+For the development of the software we use the Rapid IoT Studio using the template "Rapid IoT Weather Station" as template.
 
-- Se elimino la comunicacion BT con el celular debido a que no necesitamos que los datos de los sensores sean mandados a la aplicacion.
-- Se le añadieron modulos de comparacion para poder obtener los datos de los sensores con la siguiente configuracion.
+- The BT communication with the cell phone was eliminated because we do not need the data from the sensors to be sent to the application.
+- Comparison modules were added in order to obtain the data from the sensors with the following configuration.
 
 <img src="https://i.ibb.co/0YNtJ9X/Capture.png" width="1000">
 
-Los modulos de comparacion tienen que tener las siguientes conexiones para que funcionen correctamente.
+The comparison modules have to have the following connections to work correctly.
 
-- Para temperatura el bloque de comparacion va conectado a la funcion "GetTempStr".
-- Para humedad el bloque de comparacion va conectado a la funcion "GetHumidityStr".
-- Para presion el bloque de comparacion va conectado a la funcion "GetPressureStr".
-- Para luz ambiental el bloque de comparacion va conectado directo al bloque del sensor "TSL2572AmbientLigth".
-- Para calidad del aire el bloque de comparacion va conectado directo al bloque del sensor "CCS811AirQuality".
+- For temperature, the comparison block is connected to the "GetTempStr" function.
+- For humidity the comparison block is connected to the "GetHumidityStr" function.
+- To press the comparison block is connected to the "GetPressureStr" function.
+- For ambient light, the comparison block is connected directly to the sensor block "TSL2572AmbientLigth".
+- For air quality, the comparison block is connected directly to the sensor block "CCS811AirQuality".
 
-La configuracion de cada bloque de comparacion tiene la siguiente estructura.
+The configuration of each comparison block has the following structure.
 
 <img src="https://i.ibb.co/xgjymqj/bloque1.png" width="170"><img src="https://i.ibb.co/3rCFkTJ/bloque2.png" width="170"><img src="https://i.ibb.co/HThGnBf/bloque3.png" width="170"><img src="https://i.ibb.co/jzV0cGF/bloque4.png" width="170"><img src="https://i.ibb.co/1zjBPkg/bloque5.png" width="170">
 
-Debido a que los bloques de comparacion no tienen configurada la opcion de "Set Purlpe LED On" y "Set Yellow LED On", tendremos que modificar el codigo de la habilidad "Set White LED On" y "Toogle Red LED" con lo siguiente.
+The comparison blocks do not have the "Set Purlpe LED On" and "Set Yellow LED On" option set, we will have to modify the skill code "Set White LED On" and "Toogle Red LED" with the following.
 
 <img src="https://i.ibb.co/0r9KsPB/Code1.png" width="500">
 
-El codigo:
+The code:
 
     ATMO_Status_t EmbeddedNxpRpkRgbLed_setWhiteOn(ATMO_Value_t *in, ATMO_Value_t *out) 
     {
@@ -87,80 +87,81 @@ El codigo:
        return ATMO_Status_Success;
     }
 
-Para la app se utilizo la siguiente configuracion para realizar la llamada de emergencia.
+For the app, the following configuration is used to make the emergency call.
 
 <img src="https://i.ibb.co/WBdyRL0/app1.png" width="600"><img src="https://i.ibb.co/mz98yt5/app2.png" width="250">
 
 ## WebPages and MQTT:
 
-Para la configuracion del URL donde obtendremos nuestra localizacion deberemos crear una cuenta en https://infinityfree.net/ y crear dos paginas web que contengan los codigos en la carpeta "WebPages".
+For the configuration of the URL we will obtain our location, we will create an account in https://infinityfree.net/ and create two web pages that contain the codes in the folder "WebPages".
 
 <img src="https://i.ibb.co/C677Tx4/web1.png" width="360"><img src="https://i.ibb.co/kmmdMW4/web2.png" width="300">
 
-Una vez esten creadas ambas paginas tendremos que crear nuestro MQTT broker, el cual crearemos de cualquiera de las dos opciones mencionadas con anterioridad.
+Once both pages are created, we will have to create our MQTT broker, which we will create from any of the following two options.
 
 CloudMQTT: https://www.cloudmqtt.com/ 
 IBM Bluemix: https://www.ibm.com/internet-of-things 
 
-Para la configuracion de broker recomendamos seguir el siguiente manual el cual explica a detalle como hacerlo.
+For the configuration of broker we recommend to follow the manual, which explains in detail how to do it.
 
 Link of the manual of Watson IoT Platform: https://github.com/altaga/The-Ultimate-IBM-Watson-IoT-Platform-Guide
 
-Lo que obtendremos sera que mediante MQTT mandaremos nuestra lattitud y nuestra longitud a el mqtt broker, para asi poder dezplegarla en una pagina web como se ve en el video en la seccion "The Final Product" o mandar notificaciones como se mostrara con Pushetta.
+Through MQTT we will send our latitude and longitude to the web page, in order to be able to deploy it on the web or send notifications to Pushetta.
 
 ## Pushetta notifications:
 
-Una vez esta configurado el broker de manera exitosa solo quedaria realizar las notificaciones para mandar a cualquier persona que se desee que hemos sufrido un accidente.
+Once the broker is configured successfully, only the pushetta configuration will be needed to send the notifications to any person we want.
 
-Como primer paso tendremos que crear una cuenta en http://www.pushetta.com/ y una vez ya este creada crearemos un canal para mandar las notificaciones.
+As a first step we will have to create an account at http://www.pushetta.com/ and once this is created we will create a channel to send notifications.
 
 <img src="https://i.ibb.co/QDdDN3g/push.png" width="800">
 
-Ya que este el canal creado en la pestaña de dashboard, encontraremos nuestra APIKEY, esta nos servira mas adelante para poder mandar las notificaciones.
+When the channel for notifications is created, we will go to the tab of the dashboard, we will find its APIKEY, this will use later to send notifications with python.
 
 <img src="https://i.ibb.co/HTSPTQZ/api.png" width="600">
 
-Debido a que Javascript solo soporta Pushetta combinado con NodeJS, tuvimos que realizar un proceso adicional para poder generar la notificaciones mediante pushetta, utilizando una maquina virtual en Watson Studio corriendo en cloud, el proceso para crearla es el siguiente.
+Because Javascript only supports Pushetta combined with NodeJS, we had to perform an additional process to make notifications through pushetta, using a virtual machine in Watson Studio running in the cloud, the process to create it is as follows.
 
-1.- Tener una cuenta en Bluemix IBM: https://www.ibm.com/cloud/.
-2.- Crear el servicio de WatsonStudio.
+1.- Create an account in Bluemix IBM: https://www.ibm.com/cloud/.
 
-<img src="https://i.ibb.co/YQzB3d9/watsonstudio.png" width="400">
-3.- Abrimos servicio de WatsonStudio.
+2.- Create the WatsonStudio service.
 
-<img src="https://i.ibb.co/QC8G5C1/studio2.png" width="400">
-4.- Creamos un nuevo proyecto.
+<img src = "https://i.ibb.co/YQzB3d9/watsonstudio.png" width = "400">
+3.- Open WatsonStudio service.
 
-<img src="https://i.ibb.co/3ydmSL0/studio3.png" width="400">
-5.- Seleccionamos el paquete Standard.
+<img src = "https://i.ibb.co/QC8G5C1/studio2.png" width = "400">
+4.- Create a new project.
 
-<img src="https://i.ibb.co/h7SF6Ty/studio4.png" width="400">
-6.- Le ponemos cualquier nombre el proyecto.
+<img src = "https://i.ibb.co/3ydmSL0/studio3.png" width = "400">
+5.- Select the Standard package.
 
-<img src="https://i.ibb.co/p4NJryK/studio5.png" width="400">
-7.- Entramos a la pestaña de "Enviroments".
+<img src = "https://i.ibb.co/h7SF6Ty/studio4.png" width = "400">
+6.- Put any name to the project.
 
-<img src="https://i.ibb.co/G0xYh6w/studio6.png" width="400">
-8.- Seleccionamos Default Python 3.5 Free.
+<img src = "https://i.ibb.co/p4NJryK/studio5.png" width = "400">
+7.- Go to the "Enviroments" tab.
 
-<img src="https://i.ibb.co/ypz6kxJ/studio7.png" width="400">
-9.- Seleccionamos "New notebook".
+<img src = "https://i.ibb.co/G0xYh6w/studio6.png" width = "400">
+8.- Select Default Python 3.5 Free.
 
-<img src="https://i.ibb.co/8XcBDxH/studio8.png" width="400">
-10.- Seleccionamos le ponemos cualquier nombre.
+<img src = "https://i.ibb.co/ypz6kxJ/studio7.png" width = "400">
+9.- Select "New notebook".
 
-<img src="https://i.ibb.co/cFQnpzh/studio9.png" width="400">
-11.- Ya con este tendremos configurada nuestro notebook de python en cloud para correr el codigo que estara en la carpeta de "Python Code".
+<img src = "https://i.ibb.co/8XcBDxH/studio8.png" width = "400">
+10.- Put any name.
 
+<img src = "https://i.ibb.co/cFQnpzh/studio9.png" width = "400">
+
+11.- With this we will have configured our python notebook in the cloud to run the code that will be in the "Python Code" folder.
 <img src="https://i.ibb.co/3dzTP8V/studio10.png" width="400">
 
-Para hacer funcionar la aplicacion de python usaremos las mismas credenciales que utilizamos en el MQTT broker y la APIKEY que obtuvimos de pushetta, una vez ejecutemos el codigo podremos cerrar la ventana y nuestra aplicacion estara corriendo en cloud.
+To make the python application work, we will use the same credentials that we use in the MQTT broker and the APIKEY that we obtained from pushetta, once we execute the code we can close the window and our application will be running in the cloud.
 
-NOTA: Debido a las limitaciones de los planes gratuitos la aplicacion no podra correr por mas de 100 horas en el mes y ademas se apagara la aplicacion cada 12 horas, simplemente recomendamos encenderla cada vez que uno sale a hacer ejercicio.
+NOTE: Due to the limitations of the free plans the application can not run for more than 100 hours in the month and also the application will be turned off every 12 hours, we simply recommend turning it on every time you go out to exercise.
 
 ## The Final Product:
 
-Para el producto final se decidieron utilizar estos valores debido a que son lo valores recomendados donde no se debe hacer ejercicio.
+For the final product they decided to use these values because they are the maximum recommended values for exercise.
 
 | Sensor              | Color      | Max Value    |
 |---------------------|----------- |--------------|
@@ -170,7 +171,7 @@ Para el producto final se decidieron utilizar estos valores debido a que son lo 
 | **Ambient Light**   | Purple     | 2000 lx      | 
 | **AirQuality**      | Yellow     | 15.0 ppb     |  
 
-Ademas se le puso una base de acrilico al Rapid IoT Prototyping Kit y una correa de reloj para poder colocarse en una bicileta, sin embargo durante los experimentos notamos que tambien era posible usarlo como un reloj, como se muestran en las siguientes imagenes.
+An acrylic base was placed on the Rapid IoT Prototyping Kit and a watch strap to be placed on a bicycle, however during the experiments we noticed that it was also possible to use it as a watch, as shown in the following images.
 
 <img src="https://i.ibb.co/9pBBgRG/IMG-2432.jpg" width="420"><img src="https://i.ibb.co/N18sBRB/IMG-2436.jpg" width="420">
 
@@ -182,7 +183,7 @@ Sorry github does not allow embed videos.
 
 ## Comments:
 
-En este proyecto descubrimos que era muy sencillo programar los limites de los sensores en el Studio de NXP, ademas de que su simpleza para realizar las conexiones entre los nodos facilito el realizar la programacion de la aplicacion, ademas gracias a nuestra experiencia con HTML5 pudimos programar facilmente las aplicaciones web para realizar la tarea de geolocalizacion y comunicacion por MQTT.
+In this project we discovered that it was very easy to program the limits of the sensors in the NXP Studio, besides that its simplicity to make the connections between the nodes facilitated the programming of the application, also thanks to our experience with HTML5 we were able to program easily web applications to perform the task of geolocation and communication by MQTT.
 
 ## References:
 
