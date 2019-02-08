@@ -11,8 +11,8 @@ Always use technology to improve the world, if you are a black hat or gray hat h
 * [Introduction](#introduction)
 * [Materials](#materials)
 * [NXP Software](#nxp-software)
-* [The PCB](#the-pcb)
-* [Development](#development)
+* [WebPages and MQTT](#webpages-and-mqtt)
+* [Pushetta notifications](#pushetta-notifications)
 * [The Final Product](#the-final-product)
 * [Comments](#comments)
 * [References](#references)
@@ -124,24 +124,34 @@ Debido a que Javascript solo soporta Pushetta combinado con NodeJS, tuvimos que 
 
 - Tener una cuenta en Bluemix IBM: https://www.ibm.com/cloud/.
 - Crear el servicio de WatsonStudio.
+
 <img src="https://i.ibb.co/YQzB3d9/watsonstudio.png" width="400">
 - Abrimos servicio de WatsonStudio.
+
 <img src="https://i.ibb.co/QC8G5C1/studio2.png" width="400">
 - Creamos un nuevo proyecto.
+
 <img src="https://i.ibb.co/3ydmSL0/studio3.png" width="400">
 - Seleccionamos el paquete Standard.
+
 <img src="https://i.ibb.co/h7SF6Ty/studio4.png" width="400">
 - Le ponemos cualquier nombre el proyecto.
+
 <img src="https://i.ibb.co/p4NJryK/studio5.png" width="400">
 - Entramos a la pestaña de "Enviroments".
+
 <img src="https://i.ibb.co/G0xYh6w/studio6.png" width="400">
 - Seleccionamos Default Python 3.5 Free.
+
 <img src="https://i.ibb.co/ypz6kxJ/studio7.png" width="400">
 - Seleccionamos "New notebook".
+
 <img src="https://i.ibb.co/8XcBDxH/studio8.png" width="400">
 - Seleccionamos le ponemos cualquier nombre.
+
 <img src="https://i.ibb.co/cFQnpzh/studio9.png" width="400">
 - Ya con este tendremos configurada nuestro notebook de python en cloud para correr el codigo que estara en la carpeta de "Python Code".
+
 <img src="https://i.ibb.co/3dzTP8V/studio10.png" width="400">
 
 Para hacer funcionar la aplicacion de python usaremos las mismas credenciales que utilizamos en el MQTT broker y la APIKEY que obtuvimos de pushetta, una vez ejecutemos el codigo podremos cerrar la ventana y nuestra aplicacion estara corriendo en cloud.
@@ -151,6 +161,12 @@ NOTA: Debido a las limitaciones de los planes gratuitos la aplicacion no podra c
 ## The Final Product:
 
 
+
+Video: Click on the image:
+
+[![SBA](https://i.ibb.co/0j1wBrq/SBA.png)](https://youtu.be/9txAa27FTJQ)
+
+Sorry github does not allow embed videos.
 
 ## Comments:
 
