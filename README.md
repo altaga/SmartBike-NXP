@@ -71,7 +71,7 @@ La configuracion de cada bloque de comparacion tiene la siguiente estructura.
 
 Debido a que los bloques de comparacion no tienen configurada la opcion de "Set Purlpe LED On" y "Set Yellow LED On", tendremos que modificar el codigo de la habilidad "Set White LED On" y "Toogle Red LED" con lo siguiente.
 
-src="https://i.ibb.co/0r9KsPB/Code1.png" width="500">
+<img src="https://i.ibb.co/0r9KsPB/Code1.png" width="500">
 
 El codigo:
 
@@ -89,7 +89,7 @@ El codigo:
 
 Para la app, se utilizo se utilizo la siguiente configuracion para realizar la llamada de emergencia.
 
-src="https://i.ibb.co/WBdyRL0/app1.png" width="500">src="https://i.ibb.co/mz98yt5/app2.png" width="500">
+<img src="https://i.ibb.co/WBdyRL0/app1.png" width="500"><img src="https://i.ibb.co/mz98yt5/app2.png" width="500">
 
 ## The PCB:
 
