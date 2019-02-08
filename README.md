@@ -41,7 +41,7 @@ Hardware:
  - Screw (diameter 1.9 mm and length 4mm minimum). x 3
  
  Software:
- - Hosting server (https://infinityfree.net/).
+ - Hosting server: https://infinityfree.net/.
  - Account NXP: http://rapid-iot-studio.nxp.com/ (Software development).
  - Pushetta Account: http://www.pushetta.com/
  - IBM Bluemix account or CloudMQTT. (MQTT Broker).
@@ -87,15 +87,38 @@ El codigo:
        return ATMO_Status_Success;
     }
 
-Para la app, se utilizo se utilizo la siguiente configuracion para realizar la llamada de emergencia.
+Para la app se utilizo la siguiente configuracion para realizar la llamada de emergencia.
 
 <img src="https://i.ibb.co/WBdyRL0/app1.png" width="600"><img src="https://i.ibb.co/mz98yt5/app2.png" width="250">
 
-## The PCB:
+## WebPages and MQTT:
 
+Para la configuracion del URL donde obtendremos nuestra localizacion deberemos crear una cuenta en https://infinityfree.net/ y crear dos paginas web que contengan los codigos en la carpeta "WebPages".
 
+<img src="https://i.ibb.co/C677Tx4/web1.png" width="400"><img src="https://i.ibb.co/kmmdMW4/web2.png" width="400">
 
-## Development:
+Una vez esten creadas ambas paginas tendremos que crear nuestro MQTT broker, el cual crearemos de cualquiera de las dos opciones mencionadas con anterioridad.
+
+CloudMQTT: https://www.cloudmqtt.com/ 
+IBM Bluemix: https://www.ibm.com/internet-of-things 
+
+Para la configuracion de broker recomendamos seguir el siguiente manual el cual explica a detalle como hacerlo.
+
+Link of the manual of Watson IoT Platform: https://github.com/altaga/The-Ultimate-IBM-Watson-IoT-Platform-Guide
+
+Lo que obtendremos sera que mediante MQTT mandaremos nuestra lattitud y nuestra longitud a el mqtt broker, para asi poder dezplegarla en una pagina web como se ve en el video en la seccion "The Final Product" o mandar notificaciones como se mostrara con Pushetta.
+
+## Pushetta notifications:
+
+Una vez esta configurado el broker de manera exitosa solo quedaria realizar las notificaciones para mandar a cualquier persona que se desee que hemos sufrido un accidente.
+
+Como primer paso tendremos que crear una cuenta en http://www.pushetta.com/ y una vez ya este creada crearemos un canal para mandar las notificaciones.
+
+<img src="https://i.ibb.co/QDdDN3g/push.png" width="600">
+
+Ya que este el canal creado en la pestaña de dashboard, encontraremos nuestra APIKEY, esta nos servira mas adelante para poder mandar las notificaciones.
+
+<img src="https://i.ibb.co/HTSPTQZ/api.png" width="600">
 
 
 ## The Final Product:
