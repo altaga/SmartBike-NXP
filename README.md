@@ -89,7 +89,7 @@ El codigo:
 
 Para la app, se utilizo se utilizo la siguiente configuracion para realizar la llamada de emergencia.
 
-<img src="https://i.ibb.co/WBdyRL0/app1.png" width="300"><img src="https://i.ibb.co/mz98yt5/app2.png" width="400">
+<img src="https://i.ibb.co/WBdyRL0/app1.png" width="300"><img src="https://i.ibb.co/mz98yt5/app2.png" width="300">
 
 ## The PCB:
 
