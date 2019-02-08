@@ -146,7 +146,10 @@ Debido a que Javascript solo soporta Pushetta combinado con NodeJS, tuvimos que 
 
 Para hacer funcionar la aplicacion de python usaremos las mismas credenciales que utilizamos en el MQTT broker y la APIKEY que obtuvimos de pushetta, una vez ejecutemos el codigo podremos cerrar la ventana y nuestra aplicacion estara corriendo en cloud.
 
+NOTA: Debido a las limitaciones de los planes gratuitos la aplicacion no podra correr por mas de 100 horas en el mes y ademas se apagara la aplicacion cada 12 horas, simplemente recomendamos encenderla cada vez que uno sale a hacer ejercicio.
+
 ## The Final Product:
+
 
 
 ## Comments:
