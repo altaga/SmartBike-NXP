@@ -95,7 +95,7 @@ Para la app se utilizo la siguiente configuracion para realizar la llamada de em
 
 Para la configuracion del URL donde obtendremos nuestra localizacion deberemos crear una cuenta en https://infinityfree.net/ y crear dos paginas web que contengan los codigos en la carpeta "WebPages".
 
-<img src="https://i.ibb.co/C677Tx4/web1.png" width="400"><img src="https://i.ibb.co/kmmdMW4/web2.png" width="300">
+<img src="https://i.ibb.co/C677Tx4/web1.png" width="360"><img src="https://i.ibb.co/kmmdMW4/web2.png" width="300">
 
 Una vez esten creadas ambas paginas tendremos que crear nuestro MQTT broker, el cual crearemos de cualquiera de las dos opciones mencionadas con anterioridad.
 
@@ -114,7 +114,7 @@ Una vez esta configurado el broker de manera exitosa solo quedaria realizar las 
 
 Como primer paso tendremos que crear una cuenta en http://www.pushetta.com/ y una vez ya este creada crearemos un canal para mandar las notificaciones.
 
-<img src="https://i.ibb.co/QDdDN3g/push.png" width="600">
+<img src="https://i.ibb.co/QDdDN3g/push.png" width="800">
 
 Ya que este el canal creado en la pestaña de dashboard, encontraremos nuestra APIKEY, esta nos servira mas adelante para poder mandar las notificaciones.
 
