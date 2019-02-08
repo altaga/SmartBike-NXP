@@ -69,6 +69,28 @@ La configuracion de cada bloque de comparacion tiene la siguiente estructura.
 
 <img src="https://i.ibb.co/xgjymqj/bloque1.png" width="170"><img src="https://i.ibb.co/3rCFkTJ/bloque2.png" width="170"><img src="https://i.ibb.co/HThGnBf/bloque3.png" width="170"><img src="https://i.ibb.co/jzV0cGF/bloque4.png" width="170"><img src="https://i.ibb.co/1zjBPkg/bloque5.png" width="170">
 
+Debido a que los bloques de comparacion no tienen configurada la opcion de "Set Purlpe LED On" y "Set Yellow LED On", tendremos que modificar el codigo de la habilidad "Set White LED On" y "Toogle Red LED" con lo siguiente.
+
+src="https://i.ibb.co/0r9KsPB/Code1.png" width="500">
+
+El codigo:
+
+    ATMO_Status_t EmbeddedNxpRpkRgbLed_setWhiteOn(ATMO_Value_t *in, ATMO_Value_t *out) 
+    {
+    RGB_Led_Set_State(RGB_LED_BRIGHT_HIGH, RGB_LED_COLOR_PURPLE);
+    return ATMO_Status_Success;
+    }
+
+    ATMO_Status_t EmbeddedNxpRpkRgbLed_toggleRed(ATMO_Value_t *in, ATMO_Value_t *out) 
+    {
+       RGB_Led_Set_State(RGB_LED_BRIGHT_HIGH, RGB_LED_COLOR_YELLOW);
+       return ATMO_Status_Success;
+    }
+
+Para la app, se utilizo se utilizo la siguiente configuracion para realizar la llamada de emergencia.
+
+src="https://i.ibb.co/WBdyRL0/app1.png" width="500">src="https://i.ibb.co/mz98yt5/app2.png" width="500">
+
 ## The PCB:
 
 
