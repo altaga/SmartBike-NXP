@@ -67,7 +67,7 @@ Los modulos de comparacion tienen que tener las siguientes conexiones para que f
 
 La configuracion de cada bloque de comparacion tiene la siguiente estructura.
 
-<img src="https://i.ibb.co/xgjymqj/bloque1.png" width="100"><img src="https://i.ibb.co/3rCFkTJ/bloque2.png" width="100"><img src="https://i.ibb.co/HThGnBf/bloque3.png" width="100"><img src="https://i.ibb.co/jzV0cGF/bloque4.png" width="100"><img src="https://i.ibb.co/1zjBPkg/bloque5.png" width="100">
+<img src="https://i.ibb.co/xgjymqj/bloque1.png" width="150"><img src="https://i.ibb.co/3rCFkTJ/bloque2.png" width="150"><img src="https://i.ibb.co/HThGnBf/bloque3.png" width="150"><img src="https://i.ibb.co/jzV0cGF/bloque4.png" width="150"><img src="https://i.ibb.co/1zjBPkg/bloque5.png" width="150">
 
 ## The PCB:
 
