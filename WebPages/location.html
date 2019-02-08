@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  // Create a client instance
+  client = new Paho.MQTT.Client("m12.cloudmqtt.com", 33853,"web_10");
+  //Example client = new Paho.MQTT.Client("m11.cloudmqtt.com", 32903, "web_" + parseInt(Math.random() * 100, 10));
+
+  // set callback handlers
+  client.onConnectionLost = onConnectionLost;
+  client.onMessageArrived = onMessageArrived;
+  var options = {
+    useSSL: true,
+    userName: "ijplykav",
+    password: "tLPKg_Y3FDy_",
+    onSuccess:onConnect,
+    onFailure:doFail
+  }
+
+  // connect the client
+  client.connect(options);
+
+  // called when the client connects
+  function onConnect() {
+    var data
+    // Once a connection has been made, make a subscription and send a message.
+    console.log("onConnect");
+    $.ajax({
+    dataType: "json",
+    url: "http://extreme-ip-lookup.com/json/",
+    data: data,
+    success: function (data)
+    {
+    var datav = JSON.parse(JSON.stringify(data))
+    doStuff(datav.lat, datav.lon) 
+
+    message = new Paho.MQTT.Message("Latitude: "+String(datav.lat) + ", Longitude: "+String(datav.lon));
+    message.destinationName = "/NXPloc";
+    client.send(message);
+    }
+    });
+
+  }
+
+  function doFail(e){
+    console.log(e);
+  }
+
+  // called when the client loses its connection
+  function onConnectionLost(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      console.log("onConnectionLost:"+responseObject.errorMessage);
+    }
+  }
+
+  // called when a message arrives
+  function onMessageArrived(message) {
+    console.log("onMessageArrived:"+message.payloadString);
+  }
+</script>
+
+<script>
+function doStuff(mylat, mylong) 
+{
+  if (document.getElementById("GeoAPI")) 
+  {
+    document.getElementById("GeoAPI").innerHTML = "<iframe style=\"width: 400px; height: 400px\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"                src=\"//maps.google.com/?ll=" + mylat + "," + mylong + "&z=16&output=embed\"></iframe>";
+  }
+}
+</script>
+</head>
+<body>
+
+<div id="GeoAPI"></div>
+
+</body>
+</html>
