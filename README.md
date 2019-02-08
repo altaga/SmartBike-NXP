@@ -182,7 +182,7 @@ Sorry github does not allow embed videos.
 
 ## Comments:
 
-
+En este proyecto descubrimos que era muy sencillo programar los limites de los sensores en el Studio de NXP, ademas de que su simpleza para realizar las conexiones entre los nodos facilito el realizar la programacion de la aplicacion, ademas gracias a nuestra experiencia con HTML5 pudimos programar facilmente las aplicaciones web para realizar la tarea de geolocalizacion y comunicacion por MQTT.
 
 ## References:
 
