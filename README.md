@@ -123,34 +123,34 @@ Ya que este el canal creado en la pestaña de dashboard, encontraremos nuestra A
 Debido a que Javascript solo soporta Pushetta combinado con NodeJS, tuvimos que realizar un proceso adicional para poder generar la notificaciones mediante pushetta, utilizando una maquina virtual en Watson Studio corriendo en cloud, el proceso para crearla es el siguiente.
 
 1.- Tener una cuenta en Bluemix IBM: https://www.ibm.com/cloud/.
-- Crear el servicio de WatsonStudio.
+2.- Crear el servicio de WatsonStudio.
 
 <img src="https://i.ibb.co/YQzB3d9/watsonstudio.png" width="400">
-2.- Abrimos servicio de WatsonStudio.
+3.- Abrimos servicio de WatsonStudio.
 
 <img src="https://i.ibb.co/QC8G5C1/studio2.png" width="400">
-3.- Creamos un nuevo proyecto.
+4.- Creamos un nuevo proyecto.
 
 <img src="https://i.ibb.co/3ydmSL0/studio3.png" width="400">
-4.- Seleccionamos el paquete Standard.
+5.- Seleccionamos el paquete Standard.
 
 <img src="https://i.ibb.co/h7SF6Ty/studio4.png" width="400">
-5.- Le ponemos cualquier nombre el proyecto.
+6.- Le ponemos cualquier nombre el proyecto.
 
 <img src="https://i.ibb.co/p4NJryK/studio5.png" width="400">
-6.- Entramos a la pestaña de "Enviroments".
+7.- Entramos a la pestaña de "Enviroments".
 
 <img src="https://i.ibb.co/G0xYh6w/studio6.png" width="400">
-7.- Seleccionamos Default Python 3.5 Free.
+8.- Seleccionamos Default Python 3.5 Free.
 
 <img src="https://i.ibb.co/ypz6kxJ/studio7.png" width="400">
-8.- Seleccionamos "New notebook".
+9.- Seleccionamos "New notebook".
 
 <img src="https://i.ibb.co/8XcBDxH/studio8.png" width="400">
-9.- Seleccionamos le ponemos cualquier nombre.
+10.- Seleccionamos le ponemos cualquier nombre.
 
 <img src="https://i.ibb.co/cFQnpzh/studio9.png" width="400">
-10.- Ya con este tendremos configurada nuestro notebook de python en cloud para correr el codigo que estara en la carpeta de "Python Code".
+11.- Ya con este tendremos configurada nuestro notebook de python en cloud para correr el codigo que estara en la carpeta de "Python Code".
 
 <img src="https://i.ibb.co/3dzTP8V/studio10.png" width="400">
 
