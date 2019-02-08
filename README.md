@@ -176,7 +176,7 @@ Ademas se le puso una base de acrilico al Rapid IoT Prototyping Kit y una correa
 
 Video: Click on the image:
 
-[![SBA](https://i.ibb.co/0j1wBrq/SBA.png)](https://youtu.be/9txAa27FTJQ)
+[![SBA](https://i.ibb.co/0j1wBrq/SBA.png)](https://youtu.be/m8FgXPyPd38)
 
 Sorry github does not allow embed videos.
 
