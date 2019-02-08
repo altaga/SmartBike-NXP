@@ -160,7 +160,19 @@ NOTA: Debido a las limitaciones de los planes gratuitos la aplicacion no podra c
 
 ## The Final Product:
 
+Para el producto final se decidieron utilizar estos valores debido a que son lo valores recomendados donde no se debe hacer ejercicio.
 
+| Sensor              | Color      | Max Value    |
+|---------------------|----------- |--------------|
+| **Temperature**     | Red        | 30 ℃        | 
+| **Humidity**        | Green      | 80 %rH       | 
+| **Pressure**        | Blue       | 800 hPa      |
+| **Ambient Light**   | Purple     | 2000 lx      | 
+| **AirQuality**      | Yellow     | 15.0 ppb     |  
+
+Ademas se le puso una base de acrilico al Rapid IoT Prototyping Kit y una correa de reloj para poder colocarse en una bicileta, sin embargo durante los experimentos notamos que tambien era posible usarlo como un reloj, como se muestran en las siguientes imagenes.
+
+<img src="https://i.ibb.co/Dz7gpnL/IMG-2432.jpg" width="400"><img src="https://i.ibb.co/9gnxqcR/IMG-2436.jpg" width="400">
 
 Video: Click on the image:
 
