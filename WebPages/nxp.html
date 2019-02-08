@@ -13,7 +13,7 @@ body {
 <script type="text/javascript">
 
   // Create a client instance
-  client = new Paho.MQTT.Client("m12.cloudmqtt.com", 33853,"web_" + parseInt(Math.random() * 100, 10));
+  client = new Paho.MQTT.Client("MQTTURL", MQTTPORT,"MQTTDEVICENAME");
   //Example client = new Paho.MQTT.Client("m11.cloudmqtt.com", 32903, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
@@ -21,8 +21,8 @@ body {
   client.onMessageArrived = onMessageArrived;
   var options = {
     useSSL: true,
-    userName: "ijplykav",
-    password: "tLPKg_Y3FDy_",
+    userName: "MQTTUSERNAME",
+    password: "MQTTPASSWORD",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -55,9 +55,7 @@ body {
     var lati = parseFloat(text.substring(10, 18))
     var long = parseFloat(text.substring(30, 40))
     alert("Victor needs help!");
-    
-    doStuff(19.306425, -99.157613) 
-    //doStuff(lati, long) 
+    doStuff(lati, long) 
   }
 </script>
 <script>
@@ -71,7 +69,7 @@ function doStuff(mylat, mylong)
     var marker = new google.maps.Marker({
     position: {lat: mylat, lng: mylong},
     map: map,
-    title: 'Victor'
+    title: 'YOURNAME'
   });
 
 }
