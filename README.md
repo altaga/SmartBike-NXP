@@ -172,7 +172,7 @@ Para el producto final se decidieron utilizar estos valores debido a que son lo 
 
 Ademas se le puso una base de acrilico al Rapid IoT Prototyping Kit y una correa de reloj para poder colocarse en una bicileta, sin embargo durante los experimentos notamos que tambien era posible usarlo como un reloj, como se muestran en las siguientes imagenes.
 
-<img src="https://i.ibb.co/Dz7gpnL/IMG-2432.jpg" width="400"><img src="https://i.ibb.co/9gnxqcR/IMG-2436.jpg" width="400">
+<img src="https://i.ibb.co/9pBBgRG/IMG-2432.jpg" width="420"><img src="https://i.ibb.co/N18sBRB/IMG-2436.jpg" width="420">
 
 Video: Click on the image:
 
