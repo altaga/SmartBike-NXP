@@ -97,6 +97,27 @@ For the configuration of the URL we will obtain our location, we will create an 
 
 <img src="https://i.ibb.co/C677Tx4/web1.png" width="360"><img src="https://i.ibb.co/kmmdMW4/web2.png" width="300">
 
+La geolocalizacion puede ser hecha de dos formas diferentes, la primera es utilizar la geolocalizacion que nos provee nuestro dispositivo mediante los datos moviles o WiFi, esta forma es la mas precisa pero requiere de que el usuario acepte que su navegador en el celular permite determinar la ubicacion.
+
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+
+La segunda forma de poder realizar la geolocalizacion es mediante localizacion por IP, mediante una GET Request a una pagina web que provea localizacion por IP como , en el ejemplo de Location.html esta diseñado con localizacion de IP, pero es posible cambiarlo facilemente con el script anterior, esta forma es 
+
 Once both pages are created, we will have to create our MQTT broker, which we will create from any of the following two options.
 
 CloudMQTT: https://www.cloudmqtt.com/ 
