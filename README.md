@@ -116,7 +116,29 @@ La geolocalizacion puede ser hecha de dos formas diferentes, la primera es utili
     }
     </script>
 
-La segunda forma de poder realizar la geolocalizacion es mediante localizacion por IP, mediante una GET Request a una pagina web que provea localizacion por IP como , en el ejemplo de Location.html esta diseñado con localizacion de IP, pero es posible cambiarlo facilemente con el script anterior, esta forma es 
+La segunda forma de poder realizar la geolocalizacion es mediante localizacion por IP, mediante una GET Request por un script de AJAX a una pagina web que provea localizacion por IP como http://extreme-ip-lookup.com/json/, en el ejemplo de location.html esta diseñado con localizacion de IP, pero es posible cambiarlo facilemente con el script anterior.
+
+    <script>
+     $.ajax({
+        dataType: "json",
+        url: "http://extreme-ip-lookup.com/json/",
+        data: data,
+        success: function (data)
+        {
+        var datav = JSON.parse(JSON.stringify(data))
+        doStuff(datav.lat, datav.lon) 
+    </script>
+
+    <script>
+    function doStuff(mylat, mylong) 
+    {
+      if (document.getElementById("GeoAPI")) 
+      {
+        document.getElementById("GeoAPI").innerHTML = "<iframe style=\"width: 400px; height: 400px\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"//maps.google.com/?ll=" + mylat + "," + mylong + "&z=16&output=embed\"></iframe>";
+      }
+    }
+    </script>
+
 
 Once both pages are created, we will have to create our MQTT broker, which we will create from any of the following two options.
 
