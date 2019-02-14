@@ -97,7 +97,7 @@ For the configuration of the URL we will obtain our location, we will create an 
 
 <img src="https://i.ibb.co/C677Tx4/web1.png" width="360"><img src="https://i.ibb.co/kmmdMW4/web2.png" width="300">
 
-La geolocalizacion puede ser hecha de dos formas diferentes, la primera es utilizar la geolocalizacion que nos provee nuestro dispositivo mediante los datos moviles o WiFi, esta forma es la mas precisa pero requiere de que el usuario acepte que su navegador en el celular permite determinar la ubicacion.
+The geolocation can be done in two different ways, the first uses the geolocation provided by our device through mobile data or WiFi. This is the most accurate but requires that the user accept that their browser on the cell phone allows to determine the location.
 
     <script>
     var x = document.getElementById("demo");
@@ -116,7 +116,7 @@ La geolocalizacion puede ser hecha de dos formas diferentes, la primera es utili
     }
     </script>
 
-La segunda forma de poder realizar la geolocalizacion es mediante localizacion por IP, mediante una GET Request por un script de AJAX a una pagina web que provea localizacion por IP como http://extreme-ip-lookup.com/json/, en el ejemplo de location.html esta diseñado con localizacion de IP, pero es posible cambiarlo facilemente con el script anterior.
+The second way to get the geolocation is by IP location, through a GET Request by an AJAX script to a web page that provides IP location as http://extreme-ip-lookup.com/json/, in the example of location.html is designed with IP localization, but it is possible to change it easily with the previous script.
 
     <script>
      $.ajax({
